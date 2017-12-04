@@ -8,7 +8,7 @@ The software uses the approaches and terminology similar to GROMACS covar and an
 
 ## Info
 
-Please find below a step-by-step tutorial on using the software. Overall process is as follows:
+Please find below a step-by-step tutorial on using the software. Overall, the process is as follows:
 * Trajectories of individual lipids are extracted from the input trajectory and are concatenated in a single trajectory
 * The resulting trajectory is subjected to PCA. Covariance matrix, eigenvalues, eigenvectors and projections of the trajectory on eigenvectors are calculated.
 * Projections of the trajectory on PCA eigenvectors are analyzed by calculating the projection distribution and characteristic relaxation times.
@@ -24,7 +24,7 @@ The software requires a Python interpreter and some other modules that you need 
 
 ### Installing
 
-It is advisable to install the modules in the correct order, so you will avoid the subsequent difficulties. 
+It is advisable to install the modules in the correct order, so you will avoid subsequent difficulties. 
 
 First of all you need to install the Python interpreter version 3.x. If you are using Ubuntu 14.10 or newer, then you can install Python (recommended 3.5+) using the following commands in command prompt:
 
@@ -43,12 +43,10 @@ To execute python script (script.py) run:
 
     $ python3 script.py
 
-**NOTE**: How to install third-party python modules and module packages?
-The most crucial third-party Python package is pip. Once installed, you can download and install any modules for Python. Python 3.4 and later versions include pip by default, so to check if pip installed, open command prompt and run:
+**NOTE**: Third-party python modules and module packages can be downloaded and installed using *pip*. Python 3.4 and later versions include pip by default, so to check if pip installed, open command prompt and run:
     $ command -v pip 
 
-It is important to note that pip package belongs to Python interpreter version 2.x and pip3 package belongs to Python 3.x. 
-
+It is important to note that *pip* package belongs to Python interpreter version 2.x and *pip3* package belongs to Python 3.x. 
 
 ### Some PCAlipids basics:
 
