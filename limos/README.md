@@ -72,7 +72,7 @@ Let's try to analyze the trajectory using it!
 
 #### Step 1
 
-You need to place the PCAlipids script file in the folder that contains the trajectory (*.xtc, *.trr, etc.) and structure  (*.pdb) files for your system. In our case, the names of the trajectory and structure files are “trajectory.xtc” and “structure.pdb”, respectively. The concatenated trajectory is produced by running:
+You need to place the PCAlipids script file in the folder that contains the trajectory (.xtc, .trr, etc.) and structure  (.pdb) files for your system. In our case, the names of the trajectory and structure files are “trajectory.xtc” and “structure.pdb”, respectively. The concatenated trajectory is produced by running:
 
     $ python3 pcalipids.py concat -f trajectory.xtc -t structure.pdb
 
