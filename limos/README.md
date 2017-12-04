@@ -1,10 +1,15 @@
-# PCALipids
+# PCAlipids
 
-LIMOS is a program for analyzing lipid trajectories. Global properties of lipid bilayer such as area per lipid, bilayer thickness, density and etc do not provide information about structural properties of lipid molecules. LIMOS is based on the method called principal component analysis, which can be easily applied to trajectories with one lipid molecule. As a result we can get a quantitative description of the conformational space of a single lipid molecule. 
+This is a software for analyzing lipid trajectories using PCA. The analysis results in comprehensive description of conformaions and dynamics of lipid molecules. The methodology is based on following papers:
+doi.org/10.1038/s41598-017-11761-5
+doi.org/10.1021/acs.jctc.5b01106
 
 ## Info
 
-The current tutorial is the step-by-step instruction for using LIMOS program package. The exercises that are described here aim to help you understand the basics of data analysis applied to MD trajectories of lipids. The main idea is to provide the approach to the study of lipids dynamics. It goes on to describe the pipeline of these analysis, starting from converting trajectories of lipid bilayers into trajectory with single lipid molecule, finishing with some information on the interpretation of the data. So, the time that you will spend on this tutorial depends on the computational facilities and your own interest and sense of purpose. Good luck and have fun!
+Please find below a step-by-step tutorial on using the software. Overall process is as follows:
+* Trajectories of individual lipids are extracted from the input trajectory and are concatenated in a single trajectory
+* The resulting trajectory is subjected to PCA. Covariance matrix, eigenvalues, eigenvectors and projections of the trajectory on eigenvectors are calculated.
+* Projections of the trajectory on PCA eigenvectors are analyzed by calculating the projection distribution and characteristic relaxation times.
 
 ### Prerequisites
 
