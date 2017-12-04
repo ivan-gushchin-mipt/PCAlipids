@@ -76,8 +76,6 @@ You need to place the PCAlipids script file in the folder that contains the traj
 
     $ python3 pcalipids.py concat -f trajectory.xtc -t structure.pdb
 
-The full description of “concat” is below:
-
 **Description**: Creates a concatenated trajectory.
 
 **Input**: Trajectory file and structure file. Optional: reference structure for alignment, starting frame, frame step.
@@ -102,8 +100,6 @@ The full description of “concat” is below:
 Now you are ready to move on to the next step. Run in the command prompt:
 
     $ python3 pcalipids.py covar -f concatenated.xtc -t average.pdb
-
-The full description of covar is below:
 
 **Description**: Carry out the PCA of the concatenated trajectory.
 
