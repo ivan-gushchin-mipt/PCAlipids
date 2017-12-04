@@ -48,7 +48,7 @@ To execute python script (script.py) run:
 
 It is important to note that *pip* package belongs to Python interpreter version 2.x and *pip3* package belongs to Python 3.x. 
 
-### Some PCAlipids basics:
+### PCAlipids basics:
 
 To run the software on your computer open command prompt and run:
 
