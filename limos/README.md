@@ -3,6 +3,7 @@
 This is a software for analyzing lipid trajectories using PCA. The analysis results in comprehensive description of conformations and dynamics of lipid molecules. The methodology is based on following papers:
 * [Principal Component Analysis of Lipid Molecule Conformational Changes in Molecular Dynamics Simulations, Buslaev et al., JCTC 2016](doi.org/10.1021/acs.jctc.5b01106)
 * [Effects of Coarse Graining and Saturation of Hydrocarbon Chains on Structure and Dynamics of Simulated Lipid Molecules, Buslaev & Gushchin, Sci. Rep. 2017](doi.org/10.1038/s41598-017-11761-5)
+The software uses the approaches and terminology similar to GROMACS covar and anaeig utilities.
 
 ## Info
 
@@ -71,14 +72,11 @@ Let's try to analyze the trajectory using it!
 
 #### Step 1
 
-You need to place the PCAlipids script file in the folder that contains the trajectory (*.xtc, *.trr, etc.) and structure  (*.pdb) files for your system.
-In our case, the names of the trajectory and structure files are “trajectory.xtc” and “structure.pdb”, respectively. The concatenated trajectory is produced by running:
+You need to place the PCAlipids script file in the folder that contains the trajectory (*.xtc, *.trr, etc.) and structure  (*.pdb) files for your system. In our case, the names of the trajectory and structure files are “trajectory.xtc” and “structure.pdb”, respectively. The concatenated trajectory is produced by running:
 
     $ python3 pcalipids.py concat -f trajectory.xtc -t structure.pdb
 
-We specified the trajectory file and the topology file for our script, but did not specify the names of the output files, so they will be called “concatenated.xtc” and “average.pdb” for trajectory and topology, respectively. Also, in your working folder, files of the concatenated trajectory and topology should appear.
-
-Please find full description of “concat” below:
+The full description of “concat” is below:
 
 **Description**: Creates a concatenated trajectory.
 
@@ -97,8 +95,7 @@ Please find full description of “concat” below:
 * -stride \<positive integer; step of reading frames> 
 * -dt \<time in ps; number to determine from which frame to read the trajectory>
 * -oc \<output trajectory file> - concatenated trajectory
-* -oa \<output topology file> - average structure of concatenated trajectory
-
+* -oa \<output topology file> - average structure calculated from the concatenated trajectory
 
 #### Step 2
 
@@ -106,9 +103,29 @@ Now you are ready to move on to the next step. Run in the command prompt:
 
     $ python3 pcalipids.py covar -f concatenated.xtc -t average.pdb
 
-After execution you will find 4 new files in your working directory.
+The full description of covar is below:
 
-Files:
+**Description**: Carry out the PCA of the concatenated trajectory.
+
+**Input**: Concatenated trajectory file and structure file. Optional: two positive integers to defining the range of principal components for the analysis.
+
+**Output**: Files with eigenvalues, eigenvectors, covariance matrix and projections.
+
+**Parameters**:
+
+**Required**:
+* -f \<input trajectory file> 
+* -t \<input topology file>
+
+**Optional**:
+* -first \<number of the first principal component> 
+* -last \<number of the last principal component>
+* -oeval \<output file with eigenvalues>
+* -oevec \<output file with eigenvectors>
+* -ocov \<output file with covariance matrix> 
+* -op \<output file with projections>
+
+**Files**:
 * covar.dat - covariance matrix
 * eigenval.xvg - eigenvalues
 * eigenvec.xvg - eigenvectors
