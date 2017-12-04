@@ -1,9 +1,8 @@
 # PCAlipids
 
 This is a software for analyzing lipid trajectories using PCA. The analysis results in comprehensive description of conformaions and dynamics of lipid molecules. The methodology is based on following papers:
-* [Principal Component Analysis of Lipid Molecule Conformational Changes in Molecular Dynamics Simulations, Buslaev et al., 2016](doi.org/10.1021/acs.jctc.5b01106)
-* [Effects of Coarse Graining and Saturation of Hydrocarbon Chains on Structure and Dynamics of Simulated Lipid Molecules, Buslaev & Gushchin, 2017](doi.org/10.1038/s41598-017-11761-5)
-
+* [Principal Component Analysis of Lipid Molecule Conformational Changes in Molecular Dynamics Simulations, Buslaev et al., JCTC 2016](doi.org/10.1021/acs.jctc.5b01106)
+* [Effects of Coarse Graining and Saturation of Hydrocarbon Chains on Structure and Dynamics of Simulated Lipid Molecules, Buslaev & Gushchin, Sci. Rep. 2017](doi.org/10.1038/s41598-017-11761-5)
 
 ## Info
 
@@ -14,20 +13,18 @@ Please find below a step-by-step tutorial on using the software. Overall process
 
 ### Prerequisites
 
-Before doing this tutorial you should install Python interpreter on your working machine. Also if you wish to do the examples in this tutorial, you must have some python modules installed on your computer. Below are the modules that you need to install for the correct work of LIMOS, you can also click on to find tutorials on installing these packages and more useful information:
+The software requires a Python interpreter and some other modules that you need to install:
 
 * [Interpreter of Python 3.x](https://www.python.org/download/releases/3.0/)
 * [Numpy](http://www.numpy.org/) - helpful module for linear algebra
 * [Scipy](https://www.scipy.org/) - module for scientific calculations
-* [Mdtraj](http://mdtraj.org/1.9.0/) - reading, writing and analyzing MD trajectories 
-
-If you have already installed the above modules on your computer we suggest you go directly to the LIMOS tutorial. 
+* [MDtraj](http://mdtraj.org/1.9.0/) - reading, writing and analyzing MD trajectories 
 
 ### Installing
 
 It is advisable to install the modules in the correct order, so you will avoid the subsequent difficulties. 
 
-First of all you should install Python interpreter version 3.x. If you are using Ubuntu 14.10 or newer, then you  can install Python (recommended 3.5+) by the following commands in command prompt:
+First of all you need to install the Python interpreter version 3.x. If you are using Ubuntu 14.10 or newer, then you can install Python (recommended 3.5+) using the following commands in command prompt:
 
     $ sudo apt update
     $ sudo apt install python3
@@ -36,28 +33,28 @@ To see which version of Python you have installed run next command:
 
     $ python3 --version
 
-So you have successfully installed Python 3 interpreter, to launch it run
+To launch the Python 3 interpreter run:
 
     $ python3
 
-or to execute python script run
+To execute python script run:
 
     $ python3 script.py
 
-**NOTE**: How install third-party modules packages and modules for python?
+**NOTE**: How to install third-party python modules and module packages?
 The most crucial third-party Python package is pip. Once installed, you can download and install any modules for Python. Python 3.4 and later versions include pip by default, so to check if pip installed, open command prompt and run:
     $ command -v pip 
 
 It is important to note that pip package belongs to Python interpreter version 2.x and pip3 package belongs to Python 3.x. 
 
 
-### Some PCALipids basics:
+### Some PCAlipids basics:
 
-To run LIMOS on your computer open command prompt and run:
+To run the software on your computer open command prompt and run:
 
     $ python3 limos.py
 
-Obviously, nothing happens, except that an output line appears:
+The following output line will appear:
 
     $ Use -h or -help for more information
 
@@ -67,8 +64,8 @@ Let’s follow the advice and enter the following command in prompt:
     or
     $ python3 limos.py -help
 
-This command displays information about the functions that are implemented in the limos.
-Let's try to analyze the trajectory with LIMOS!
+This command displays information about the functions that are implemented in the PCAlipids.
+Let's try to analyze the trajectory using it!
 
 **Step by step**:
 
