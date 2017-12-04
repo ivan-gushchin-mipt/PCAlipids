@@ -80,13 +80,14 @@ We specified the trajectory file and the topology file for our script, but did n
 
 Please find full description of “concat” below:
 
-“concat”:
-Call command: $ python3 limos.py concat …
 Description: Creates a concatenated trajectory.
+
 Input: Required trajectory file and topology file; optional: reference file for future alignment, step of reading frames, start frame.
+
 Output: Trajectory file and topology file for single lipid molecule.
+
 Parameters:
-Required:
+*Required:
 -f <input trajectory file> 
 -t <input topology file> 
 Optional:
