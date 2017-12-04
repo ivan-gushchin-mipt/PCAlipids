@@ -1,6 +1,6 @@
 # PCAlipids
 
-This is a software for analyzing lipid trajectories using PCA. The analysis results in comprehensive description of conformaions and dynamics of lipid molecules. The methodology is based on following papers:
+This is a software for analyzing lipid trajectories using PCA. The analysis results in comprehensive description of conformations and dynamics of lipid molecules. The methodology is based on following papers:
 * [Principal Component Analysis of Lipid Molecule Conformational Changes in Molecular Dynamics Simulations, Buslaev et al., JCTC 2016](doi.org/10.1021/acs.jctc.5b01106)
 * [Effects of Coarse Graining and Saturation of Hydrocarbon Chains on Structure and Dynamics of Simulated Lipid Molecules, Buslaev & Gushchin, Sci. Rep. 2017](doi.org/10.1038/s41598-017-11761-5)
 
@@ -18,7 +18,7 @@ The software requires a Python interpreter and some other modules that you need 
 * [Interpreter of Python 3.x](https://www.python.org/download/releases/3.0/)
 * [Numpy](http://www.numpy.org/) - helpful module for linear algebra
 * [Scipy](https://www.scipy.org/) - module for scientific calculations
-* [MDtraj](http://mdtraj.org/1.9.0/) - reading, writing and analyzing MD trajectories 
+* [MDTraj](http://mdtraj.org/1.9.0/) - reading, writing and analyzing MD trajectories 
 
 ### Installing
 
@@ -37,7 +37,7 @@ To launch the Python 3 interpreter run:
 
     $ python3
 
-To execute python script run:
+To execute python script (script.py) run:
 
     $ python3 script.py
 
@@ -71,12 +71,31 @@ Let's try to analyze the trajectory using it!
 
 #### Step 1
 
-You need to place the PCAlipids script file in the folder that contains the trajectory (*.xtc, *.trr, etc.) and file of the topology (*.pdb) of your system.
-In our case, name of trajectory file - “trajectory.xtc” and topology file - “topology.pdb”. To start, as it was said, it is necessary to create a concatenated trajectory. Run next command:
+You need to place the PCAlipids script file in the folder that contains the trajectory (*.xtc, *.trr, etc.) and structure  (*.pdb) files for your system.
+In our case, the names of the trajectory and structure files are “trajectory.xtc” and “structure.pdb”, respectively. The concatenated trajectory is produced by running:
 
-    $ python3 pcalipids.py concat -f trajectory.xtc -t topology.pdb
+    $ python3 pcalipids.py concat -f trajectory.xtc -t structure.pdb
 
 We specified the trajectory file and the topology file for our script, but did not specify the names of the output files, so they will be called “concatenated.xtc” and “average.pdb” for trajectory and topology, respectively. Also, in your working folder, files of the concatenated trajectory and topology should appear.
+
+Please find full description of “concat” below:
+
+“concat”:
+Call command: $ python3 limos.py concat …
+Description: Creates a concatenated trajectory.
+Input: Required trajectory file and topology file; optional: reference file for future alignment, step of reading frames, start frame.
+Output: Trajectory file and topology file for single lipid molecule.
+Parameters:
+Required:
+-f <input trajectory file> 
+-t <input topology file> 
+Optional:
+-ref <reference structure>
+-stride <positive integer; step of reading frames>, 
+-dt <time in ps; number to determine from which frame to read the trajectory>
+-oc <output trajectory file> - concatenated trajectory
+-oa <output topology file> - average structure of concatenated trajectory
+
 
 #### Step 2
 
