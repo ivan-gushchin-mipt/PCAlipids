@@ -52,7 +52,7 @@ It is important to note that pip package belongs to Python interpreter version 2
 
 To run the software on your computer open command prompt and run:
 
-    $ python3 limos.py
+    $ python3 pcalipids.py
 
 The following output line will appear:
 
@@ -60,25 +60,21 @@ The following output line will appear:
 
 Let’s follow the advice and enter the following command in prompt:
 
-    $ python3 limos.py -h
+    $ python3 pcalipids.py -h
     or
-    $ python3 limos.py -help
+    $ python3 pcalipids.py -help
 
 This command displays information about the functions that are implemented in the PCAlipids.
 Let's try to analyze the trajectory using it!
 
-**Step by step**:
-
-Analyzing the lipid bilayer trajectory with LIMOS consists basically of 2 principal steps:
-* Converting the trajectory of lipid bilayer into trajectory with single lipid molecule without water
-* Providing principal component analysis for concatenated trajectory
+**ANALYSIS**:
 
 #### Step 1
 
-You need to place the LIMOS script file in the folder that contains the trajectory (*.xtc, *.trr, etc.) and file of the topology (*.pdb) of your system.
+You need to place the PCAlipids script file in the folder that contains the trajectory (*.xtc, *.trr, etc.) and file of the topology (*.pdb) of your system.
 In our case, name of trajectory file - “trajectory.xtc” and topology file - “topology.pdb”. To start, as it was said, it is necessary to create a concatenated trajectory. Run next command:
 
-    $ python3 limos.py concat -f trajectory.xtc -t topology.pdb
+    $ python3 pcalipids.py concat -f trajectory.xtc -t topology.pdb
 
 We specified the trajectory file and the topology file for our script, but did not specify the names of the output files, so they will be called “concatenated.xtc” and “average.pdb” for trajectory and topology, respectively. Also, in your working folder, files of the concatenated trajectory and topology should appear.
 
@@ -86,7 +82,7 @@ We specified the trajectory file and the topology file for our script, but did n
 
 Now you are ready to move on to the next step. Run in the command prompt:
 
-    $ python3 limos.py covar -f concatenated.xtc -t average.pdb
+    $ python3 pcalipids.py covar -f concatenated.xtc -t average.pdb
 
 After execution you will find 4 new files in your working directory.
 
@@ -112,30 +108,23 @@ We wrote all analyzing data in text files, so let us familiarize the structure o
 ### Data processing for visualizing results
 
 
-## Scientific base
-
-[]
-
 ## Contributing
 
-Please read [CONTRIBUTING.txt](https://github.com/KhalidMustafin/ScAns/blob/master/limos/CONTRIBUTING.txt) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING.txt](CONTRIBUTING.txt) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Versioning
 
-Look for [VERSION.txt](https://github.com/KhalidMustafin/ScAns/blob/master/limos/VERSION.txt)
+Look for [VERSION.txt](VERSION.txt)
 
-## Authors
+## Contacts
 
-* **Ivan Gushchin** - *Laboratory head, initial idea*
-* **Pavel Buslaev** - *Developer, initial idea*
-* **Khalid Mustafin** - *Developer*
+* **Ivan Gushchin** - ivan.gushchin@phystech.edu *general questions*
+* **Pavel Buslaev** - *applying PCAlipids to study lipids*
+* **Khalid Mustafin** - *developer of PCAlipids*
 
 See also the list of [contributors](https://github.com/membrane-systems) who participated in this project.
 
 ## License
 
-This project is licensed ...
-
 ## Acknowledgments
 
-* ...
