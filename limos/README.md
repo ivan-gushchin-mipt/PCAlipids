@@ -89,8 +89,8 @@ Please find full description of “concat” below:
 **Parameters**:
 
 **Required**:
-* -f <input trajectory file> 
-* -t <input topology file> 
+* -f \<input trajectory file> 
+* -t \<input topology file> 
 
 **Optional**:
 * -ref <reference structure>
