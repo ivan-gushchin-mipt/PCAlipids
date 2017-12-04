@@ -1,8 +1,9 @@
 # PCAlipids
 
 This is a software for analyzing lipid trajectories using PCA. The analysis results in comprehensive description of conformaions and dynamics of lipid molecules. The methodology is based on following papers:
-doi.org/10.1038/s41598-017-11761-5
-doi.org/10.1021/acs.jctc.5b01106
+* Principal Component Analysis of Lipid Molecule Conformational Changes in Molecular Dynamics Simulations, Buslaev et al., 2016 (doi.org/10.1021/acs.jctc.5b01106)
+* Effects of Coarse Graining and Saturation of Hydrocarbon Chains on Structure and Dynamics of Simulated Lipid Molecules, Buslaev & Gushchin, 2017 (doi.org/10.1038/s41598-017-11761-5)
+
 
 ## Info
 
