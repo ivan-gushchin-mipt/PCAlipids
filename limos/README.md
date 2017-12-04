@@ -149,8 +149,8 @@ Look for [VERSION.txt](VERSION.txt)
 
 ## Contacts
 
-* **Khalid Mustafin** - *developer of PCAlipids; code-related questions*
-* **Pavel Buslaev** - *applying PCAlipids to study lipids*
+* **Khalid Mustafin** - khalid.mustafin@phystech.edu *developer of PCAlipids; code-related questions*
+* **Pavel Buslaev** - pbuslaev@phystech.edu *applying PCAlipids to study lipids*
 * **Ivan Gushchin** - ivan.gushchin@phystech.edu *general questions*
 
 See also the list of [contributors](https://github.com/membrane-systems) who participated in this project.
