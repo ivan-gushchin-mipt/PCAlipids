@@ -87,12 +87,14 @@ Please find full description of “concat” below:
 **Output**: Trajectory file and topology file for single lipid molecule.
 
 **Parameters**:
+
 **Required**:
 * -f <input trajectory file> 
 * -t <input topology file> 
+
 **Optional**:
 * -ref <reference structure>
-* -stride <positive integer; step of reading frames>, 
+* -stride <positive integer; step of reading frames> 
 * -dt <time in ps; number to determine from which frame to read the trajectory>
 * -oc <output trajectory file> - concatenated trajectory
 * -oa <output topology file> - average structure of concatenated trajectory
