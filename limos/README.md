@@ -133,16 +133,13 @@ The full description of covar is below:
 
 We wrote all analyzing data in text files, so let us familiarize the structure of this files.
 
-**Covariance matrix** has equal dimensions and they always are divisible by 3 (because of degrees of freedom are divisible by 3 too), so we wrote it in file using the following algorithm:
-    1) Transformation the covariance matrix into one-dimensional array
-    2) Divide the array into blocks of length 3
-    3) Write each block inline
+**Covariance matrix** is a square matrix with the number of dimensions equal to the number of degrees of freedom in the system, and consequently divisible by 3. For output, the matrix is converted into one-dimensional array and written in blocks of 3 values per line.
 
-**Eigenvalues** data is a one-dimensional array of float numbers, so we write them line by line in file.
+**Eigenvalues** is a one-dimensional array of float numbers, each line contains a single eigenvalue.
 
-**Eigenvectors** data is a two-dimensional array of float numbers, so we write to the line only one component, one after the other.
+**Eigenvectors** is a two-dimensional array of float numbers, each line contains a single eigenvector.
 
-**Projections data**  is a one-dimensional array of float numbers, the number of projections equals to number of frames in concatenated trajectory. We write them one after one in file.
+**Projections data**  is a one-dimensional array of float numbers for each of the components. The components are written one after another, each line contains the projection value for a particular projection for a particular frame.
 
 ### Data processing for visualizing results
 
