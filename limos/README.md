@@ -93,11 +93,11 @@ Please find full description of “concat” below:
 * -t \<input topology file> 
 
 **Optional**:
-* -ref <reference structure>
-* -stride <positive integer; step of reading frames> 
-* -dt <time in ps; number to determine from which frame to read the trajectory>
-* -oc <output trajectory file> - concatenated trajectory
-* -oa <output topology file> - average structure of concatenated trajectory
+* -ref \<reference structure>
+* -stride \<positive integer; step of reading frames> 
+* -dt \<time in ps; number to determine from which frame to read the trajectory>
+* -oc \<output trajectory file> - concatenated trajectory
+* -oa \<output topology file> - average structure of concatenated trajectory
 
 
 #### Step 2
